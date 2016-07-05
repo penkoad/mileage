@@ -14,8 +14,8 @@
         </div>
 
         <div class="form-group">
-            <label for="billdate">Date:</label>
-            <input type="text" name="billdate" id="billdate" class="form-control" value="{{ old('billdate') }}" required>
+            <label for="added_on">Date:</label>
+            <input type="text" name="added_on" id="added_on" class="form-control" value="{{ old('added_on') }}" required>
         </div>
 
     </div>

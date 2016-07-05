@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Bill;
+use App\Http\Requests\BillRequest;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -29,4 +31,18 @@ class BillController extends Controller
     {
         return view('bills.create');
     }
+
+    public function store(BillRequest $request)
+    {
+        $bill = \Auth::user()->publish(
+            New Bill($request->all())
+        );
+
+        //dd($bill);
+        if ($bill->save())
+            flash()->Success('Success!', 'Your bill has been created.');
+
+        return view('home');
+    }
+
 }

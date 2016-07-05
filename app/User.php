@@ -23,4 +23,15 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function bills()
+    {
+        return $this->hasMany(Bill::class);
+    }
+
+    public function publish(Bill $bill)
+    {
+        // This will automatically assign the user_id behind the scene
+        return $this->bills()->save($bill);
+    }
 }

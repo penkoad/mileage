@@ -15,8 +15,8 @@ class Bill extends Model
     protected $fillable = [
         'user_id',
         'amount',
-        'milage',
-        'billdate',
+        'mileage',
+        'added_on',  // can we defaut to current_timestamp because it makes sense generally?
     ];
 
     /**
