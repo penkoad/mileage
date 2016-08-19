@@ -34,9 +34,12 @@ class BillController extends Controller
 
     public function store(BillRequest $request)
     {
+        // The user in session will be added on the bill
         $bill = \Auth::user()->publish(
             New Bill($request->all())
         );
+
+        // @todo: do we want to store twice the same bill?
 
         //dd($bill);
         if ($bill->save())
