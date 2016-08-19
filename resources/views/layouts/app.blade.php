@@ -18,6 +18,8 @@
             margin-right: 6px;
         }
     </style>
+
+    @yield('extra_css')
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default navbar-static-top">
@@ -34,6 +36,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
+                    <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
                     Mileage
                 </a>
             </div>
@@ -41,8 +44,7 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                    <li><a href="{{ url('/bills/create') }}">Bills</a></li>
+                    <li><a href="{{ url('/bills') }}">Bills</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -71,7 +73,7 @@
 
     <!-- JavaScripts -->
     <script src="/js/libs.js" ></script>
-    @yield('scripts.footer')
+    @yield('bottom_scripts')
     @include('flash')
 </body>
 </html>

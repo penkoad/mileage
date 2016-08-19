@@ -25,9 +25,23 @@ class BillRequest extends Request
     public function rules()
     {
         return [
-            'amount'  => 'required',
-            'mileage' => 'required',
+            'mileage'  => 'required|integer',
+            'amount'   => 'required|numeric|max:100',
+            'added_on' => 'required|unique:bills'
         ];
     }
 
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'amount.required'  => 'An amount is required',
+            'mileage.required' => 'An mileage is required',
+            'added_on.unique'  => 'A bill already exists for this day',
+        ];
+    }
 }

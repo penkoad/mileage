@@ -19,6 +19,7 @@ class BillController extends Controller
     public function index()
     {
         //
+        return view('bills.index', ['bill' => Bill::all()]);
     }
 
 
@@ -32,6 +33,10 @@ class BillController extends Controller
         return view('bills.create');
     }
 
+    /**
+     * @param BillRequest $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function store(BillRequest $request)
     {
         // The user in session will be added on the bill
