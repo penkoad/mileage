@@ -19,7 +19,7 @@ class BillController extends Controller
     public function index()
     {
         //
-        return view('bills.index', ['bill' => Bill::all()]);
+        return view('bills.index', ['bill' =>  Bill::orderBy('added_on', 'desc')->get()]);
     }
 
 
@@ -50,7 +50,7 @@ class BillController extends Controller
         if ($bill->save())
             flash()->Success('Success!', 'Your bill has been created.');
 
-        return view('home');
+        return view('bills.index', ['bill' => Bill::orderBy('added_on', 'desc')->get()]);
     }
 
 }
