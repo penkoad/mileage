@@ -15,7 +15,7 @@
                     <tr>
                         <td>{{ $abill->amount }}</td>
                         <td>{{ $abill->mileage }}</td>
-                        <td>{{ $abill->added_on }}</td>
+                        <td>{{ date('F d, Y', strtotime($abill->added_on)) }}</td>
                     </tr>
                 @endforeach
             </table>
