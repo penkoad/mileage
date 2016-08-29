@@ -45,6 +45,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/bills') }}">Bills</a></li>
+                    <li><a href="{{ url('/chart') }}">Chart</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
