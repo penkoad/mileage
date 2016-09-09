@@ -14,6 +14,10 @@ class Flash {
         ]);
     }
 
+    /**
+     * @param $title
+     * @param $message
+     */
     public function info($title,$message)
     {
         return $this->create($title, $message, 'info');
