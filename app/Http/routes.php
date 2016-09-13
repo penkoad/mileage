@@ -16,7 +16,7 @@ Route::auth();
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/', 'HomeController@index');
-    Route::get('/home', 'HomeController@index');
+    Route::get('/home', [ 'as' => 'bills.list', 'uses' => 'HomeController@index']);
     Route::resource('/bills', 'BillController');
     Route::get('/chart', 'ChartController@index');
 });
