@@ -44,13 +44,15 @@ class BillController extends Controller
             New Bill($request->all())
         );
 
-        // @todo: do we want to store twice the same bill?
-
         //dd($bill);
-        if ($bill->save())
+        if ($bill->save()){
             flash()->Success('Success!', 'Your bill has been created.');
+        }
 
-        return view('bills.index', ['bill' => Bill::orderBy('added_on', 'desc')->get()]);
+        // After flashing a message you need to redirect or you'll flash twice
+        // in request and the next one.
+        return redirect()->route('bills.list');
+
     }
 
 }
