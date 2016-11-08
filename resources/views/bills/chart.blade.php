@@ -96,7 +96,7 @@
         chart.addListener("dataUpdated", zoomChart);
 
         function zoomChart(){
-            chart.zoomToDates(new Date(2016, 6, 1), new Date(2016, 9, 13));
+            chart.zoomToDates(new Date(2016, 6, 1), new Date());
         }
     </script>
 @stop
