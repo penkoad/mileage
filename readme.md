@@ -7,4 +7,4 @@ This little app is there to log my mileage and the fuel cost of my car.
 ✔ Add a js lib to handle a diagram for mileage drift.  
 ☐ Add the capacity to choose to directly to add a new bill after posting a bill.  
 ☐ Calculate mileage drift.  
-☐ Upgrade to L5.3
+✔ Upgrade to L5.3

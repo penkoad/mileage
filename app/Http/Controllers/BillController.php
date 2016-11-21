@@ -6,11 +6,8 @@ use App\Bill;
 use App\Http\Requests\BillRequest;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-
 class BillController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
@@ -18,8 +15,7 @@ class BillController extends Controller
      */
     public function index()
     {
-        //
-        return view('bills.index', ['bill' =>  Bill::orderBy('added_on', 'desc')->get()]);
+        return view('bills.index', ['bill' => Bill::orderBy('added_on', 'desc')->get()]);
     }
 
 
@@ -45,14 +41,12 @@ class BillController extends Controller
         );
 
         //dd($bill);
-        if ($bill->save()){
+        if ($bill->save()) {
             flash()->Success('Success!', 'Your bill has been created.');
         }
 
         // After flashing a message you need to redirect or you'll flash twice
         // in request and the next one.
         return redirect()->route('bills.list');
-
     }
-
 }
