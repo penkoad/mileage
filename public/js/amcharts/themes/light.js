@@ -25,7 +25,7 @@ AmCharts.themes.light = {
 	AmRectangularChart: {
 		zoomOutButtonColor: '#000000',
 		zoomOutButtonRollOverAlpha: 0.15,
-		zoomOutButtonImage: "lens"
+		zoomOutButtonImage: "lens.png"
 	},
 
 	AxisBase: {
@@ -116,8 +116,18 @@ AmCharts.themes.light = {
 	},
 
 	ZoomControl: {
-		buttonFillAlpha:0.7,
-		buttonIconColor:"#a7a7a7"
+		buttonRollOverColor: "#3c5bdc",
+		buttonFillColor: "#3994e2",
+		buttonBorderColor: "#3994e2",
+		buttonFillAlpha: 0.8,
+		gridBackgroundColor: "#FFFFFF",
+		buttonBorderAlpha:0,
+		buttonCornerRadius:2,
+		gridColor:"#FFFFFF",
+		gridBackgroundColor:"#000000",
+		buttonIconAlpha:0.6,
+		gridAlpha: 0.6,
+		buttonSize:20
 	},
 
 	SmallMap: {

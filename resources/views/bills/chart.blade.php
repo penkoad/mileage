@@ -96,7 +96,8 @@
         chart.addListener("dataUpdated", zoomChart);
 
         function zoomChart(){
-            chart.zoomToDates(new Date(2016, 6, 1), new Date());
+            // Between the date I got the car and tomorrow
+            chart.zoomToDates(new Date(2016, 6, 15), new Date(new Date().getTime() + 24 * 60 * 60 * 1000));
         }
     </script>
 @stop
