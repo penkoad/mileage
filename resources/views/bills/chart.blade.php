@@ -59,8 +59,8 @@
                 "valueField": "value"
             }],
             "trendLines": [{
-                "finalDate": "2017-06-15 12",
-                "finalValue": 21666,
+                "finalDate": "2018-06-15 12",
+                "finalValue": 46666,
                 "initialDate": "2016-06-15 12",
                 "initialValue": 0,
                 "lineColor": "#CC0000"
