@@ -12,9 +12,10 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        \App\User::create([
+        \App\User::forceCreate([
             'email'    => 'stephane@gautrin.fr',
             'name' => 'Stephane Gautrin',
+            'password' => '',
         ]);
     }
 }

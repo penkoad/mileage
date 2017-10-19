@@ -22,3 +22,15 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Bill::class, function (Faker\Generator $faker) {
+
+    return [
+        'user_id'    => function () {
+            return factory('App\User')->create()->id;
+        },
+        'amount' => $faker->numberBetween(15, 63),
+        'mileage' => $faker->numberBetween(1000, 30000),
+        'added_on' => $faker->dateTimeThisYear('now'),
+    ];
+});

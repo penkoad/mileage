@@ -11,14 +11,16 @@
                     <th>Mileage</th>
                     <th>Added on</th>
                 </tr>
-                @foreach($bill as $abill)
+                @foreach($bills as $bill)
                     <tr>
-                        <td>{{ $abill->amount }}</td>
-                        <td>{{ $abill->mileage }}</td>
-                        <td>{{ date('F d, Y', strtotime($abill->added_on)) }}</td>
+                        <td>{{ $bill->amount }}</td>
+                        <td>{{ $bill->mileage }}</td>
+                        <td>{{ date('F d, Y', strtotime($bill->added_on)) }}</td>
                     </tr>
                 @endforeach
             </table>
+
+            {{ $bills->render() }}
         </div>
         <hr>
         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
