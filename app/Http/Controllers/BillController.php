@@ -51,6 +51,6 @@ class BillController extends Controller
 
         // After flashing a message you need to redirect or you'll flash twice
         // in request and the next one.
-        return redirect()->route('bills.list');
+        return redirect()->route('chart');
     }
 }

@@ -1,6 +1,6 @@
 {{ csrf_field() }}
 <div class="row">
-    <div class='col-sm-6'>
+    <div class='col-sm-12'>
         <div class="form-group">
             <label for="mileage">Mileage:</label>
             <input type="text" name="mileage" id="mileage" class="form-control" value="{{ old('mileage') }}" required>
@@ -23,7 +23,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 @section('extra_css')
