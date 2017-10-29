@@ -14,6 +14,15 @@ require('laravel-elixir-vue-2');
  */
 
 elixir((mix) => {
+    mix.copy('node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css',
+        'resources/assets/css/libs'
+    )
+    .copy('node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
+        'resources/assets/js/libs'
+    )
+});
+
+elixir((mix) => {
     mix.sass('app.scss')
     .webpack('app.js')
     .copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/**',
@@ -22,6 +31,7 @@ elixir((mix) => {
         'libs/font-awesome.css',
         'libs/sweetalert.css',
         'libs/lity.css',
+        'libs/bootstrap-datepicker.min.css'
        ], './public/css/libs.css')
     .copy('node_modules/amcharts/dist/amcharts/**',
     'public/js/amcharts')
@@ -29,6 +39,7 @@ elixir((mix) => {
     'public/fonts')
     .scripts([
         'libs/sweetalert-dev.js',
-        'libs/lity.js'
+        'libs/lity.js',
+        'libs/bootstrap-datepicker.min.js'
     ], './public/js/libs.js');
 });

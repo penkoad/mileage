@@ -17,9 +17,9 @@
             <div class="flex">
                 <h4>Bills</h4>
             </div>
-            <button class="btn btn-default">
-                <a href="{{ url('/bills/create') }}" class="">Add a bill</a>
-            </button>
+            <a href="{{ url('/bills/create') }}" class="">
+                <button class="btn btn-default">Add a bill</button>
+            </a>
         </div>
 
         <br>
