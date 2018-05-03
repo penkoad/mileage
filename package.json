@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "amcharts": "^3.14.0",
-    "bootstrap-datepicker": "^1.8.0"
+    "bootstrap-datepicker": "^1.8.0",
+    "vue-template-compiler": "^2.5.16"
   }
 }
