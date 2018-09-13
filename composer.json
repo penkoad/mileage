@@ -9,21 +9,19 @@
   "type": "project",
   "require": {
     "php": ">=7.0.0",
-    "laravel/framework": "5.5.*",
+    "laravel/framework": "5.6.*",
     "guzzlehttp/guzzle": "^6.2",
     "laravel/tinker": "^1.0"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
     "mockery/mockery": "0.9.*",
-    "phpunit/phpunit": "~6.0",
-    "symfony/css-selector": "3.1.*",
-    "symfony/dom-crawler": "3.1.*",
-    "barryvdh/laravel-ide-helper": "^2.2"
+    "phpunit/phpunit": "^7.0"
   },
   "autoload": {
     "classmap": [
-      "database"
+      "database/seeds",
+      "database/factories"
     ],
     "files": [
       "app/helpers.php"
@@ -35,7 +33,10 @@
   "autoload-dev": {
     "classmap": [
       "tests/TestCase.php"
-    ]
+    ],
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
   },
   "scripts": {
     "post-root-package-install": [
@@ -44,14 +45,6 @@
     "post-create-project-cmd": [
       "php artisan key:generate"
     ],
-    "post-install-cmd": [
-      "Illuminate\\Foundation\\ComposerScripts::postInstall",
-      "php artisan optimize"
-    ],
-    "post-update-cmd": [
-      "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-      "php artisan optimize"
-    ],
     "post-autoload-dump": [
       "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
       "@php artisan package:discover"
@@ -59,6 +52,9 @@
   },
   "config": {
     "preferred-install": "dist",
+    "sort-packages": true,
     "optimize-autoloader": true
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
