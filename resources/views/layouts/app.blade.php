@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" ></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('extra_css')
 </head>
 <body>
 <div id="app">
@@ -29,7 +30,6 @@
     </main>
 </div>
 <!-- Scripts -->
-<script src="/js/app.js"></script>
 <script src="/js/libs.js" ></script>
 @yield('bottom_scripts')
 @include('flash')

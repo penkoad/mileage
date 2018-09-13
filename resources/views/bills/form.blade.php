@@ -26,7 +26,6 @@
 </div>
 
 @section('extra_css')
-    <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker3.min.css">
 @stop
 
