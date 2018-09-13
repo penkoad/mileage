@@ -14,7 +14,7 @@ let mix = require('laravel-mix');
 mix.js('resources/assets/js/app.js', 'public/js')
     .sass('resources/assets/sass/app.scss', 'public/css');
 
-
+mix.copy('node_modules/font-awesome5/webfonts', 'public/webfonts');
 // mix.copy('node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css',
 //         'resources/assets/css/libs'
 // )
@@ -23,9 +23,6 @@ mix.js('resources/assets/js/app.js', 'public/js')
 //     'resources/assets/js/libs'
 // );
 
-// mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/**',
-//     'public/fonts/bootstrap');
-
 // mix.styles([
 //     'libs/font-awesome.css',
 //     'libs/sweetalert.css',
@@ -33,8 +30,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
 //     'libs/bootstrap-datepicker.min.css'
 // ], './public/css/libs.css');
 
-// mix.copy('node_modules/amcharts/dist/amcharts/**',
-//     'public/js/amcharts');
+mix.copy('node_modules/amcharts/dist/amcharts', 'public/amcharts');
 
 // mix.copy('resources/assets/fonts/**',
 //     'public/fonts');

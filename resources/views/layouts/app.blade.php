@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,28 +10,28 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
-    <link href="/css/libs.css" rel="stylesheet">
-    @yield('extra_css')
-
     <!-- Scripts -->
-    <script>
-        window.Laravel = <?php echo json_encode([
-            'csrfToken' => csrf_token(),
-        ]); ?>
-    </script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        @include('partials.nav')
-        @yield('content')
-    </div>
+<div id="app">
+    @include('partials.nav')
 
-    <!-- Scripts -->
-    <script src="/js/app.js"></script>
-    <script src="/js/libs.js" ></script>
-    @yield('bottom_scripts')
-    @include('flash')
+    <main class="py-4">
+        @yield('content')
+    </main>
+</div>
+<!-- Scripts -->
+<script src="/js/app.js"></script>
+<script src="/js/libs.js" ></script>
+@yield('bottom_scripts')
+@include('flash')
 </body>
 </html>
