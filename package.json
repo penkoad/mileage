@@ -1,23 +1,28 @@
 {
   "private": true,
   "scripts": {
-    "prod": "gulp --production",
-    "dev": "gulp watch"
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
-    "bootstrap-sass": "^3.3.7",
-    "gulp": "^3.9.1",
-    "jquery": "^3.3.1",
-    "laravel-elixir": "^6.0.0-18",
-    "laravel-elixir-vue-2": "^0.2.0",
-    "laravel-elixir-webpack-official": "^1.0.2",
-    "lodash": "^4.17.10",
-    "vue": "^2.5.16",
-    "vue-resource": "^1.5.0"
+    "axios": "^0.18",
+    "bootstrap": "^4.0.0",
+    "popper.js": "^1.12",
+    "cross-env": "^5.1",
+    "jquery": "^3.2",
+    "laravel-mix": "^2.0",
+    "lodash": "^4.17.4",
+    "vue": "^2.5.7"
   },
   "dependencies": {
-    "amcharts": "^3.14.0",
-    "bootstrap-datepicker": "^1.8.0",
-    "vue-template-compiler": "^2.5.16"
+    "amcharts": "^3.14.5",
+    "font-awesome5": "^1.0.5",
+    "gijgo": "^1.9.10",
+    "yarn": "^1.9.4"
   }
 }

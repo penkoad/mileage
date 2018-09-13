@@ -19,10 +19,10 @@
 
 @section('bottom_scripts')
 
-    <script src="/js/amcharts/amcharts.js"></script>
-    <script src="/js/amcharts/serial.js"></script>
-    <script src="/js/amcharts/plugins/export/export.min.js"></script>
-    <script src="/js/amcharts/themes/light.js"></script>
+    <script src="/amcharts/amcharts.js"></script>
+    <script src="/amcharts/serial.js"></script>
+    <script src="/amcharts/plugins/export/export.min.js"></script>
+    <script src="/amcharts/themes/light.js"></script>
 
     <script>
         var chart = AmCharts.makeChart("chartdiv", {
@@ -93,7 +93,7 @@
             }
         });
 
-        chart.addListener("dataUpdated", zoomChart);
+        // chart.addListener("dataUpdated", zoomChart);
 
         function zoomChart(){
             // Between the date I got the car and tomorrow

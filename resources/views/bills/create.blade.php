@@ -40,11 +40,7 @@
                                     <label for="added_on">Date:</label>
 
                                     <div class='input-group date'>
-                                        <input type="text" class="form-control" name="added_on" id="added_on" value="{{ old('added_on') }}"
-                                               required>
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
+                                        <input type="text" class="form-control" name="added_on" id="added_on" value="{{ old('added_on') }}">
                                     </div>
                                 </div>
                             </div>
@@ -63,14 +59,17 @@
 
 @stop
 
+@section('extra_css')
+    <link href="{{ asset('css/libs.css') }}" rel="stylesheet">
+@stop
+
 @section('bottom_scripts')
     <script>
-        $('.input-group.date').datepicker({
-            format: "yyyy-mm-dd",
-            //startDate: "today",
-            daysOfWeekDisabled: "0,6",
-            autoclose: true,
-            todayHighlight: true
-        });
+    $('#added_on').datepicker({
+        uiLibrary: 'bootstrap4',
+        disableDaysOfWeek: [0, 6],
+        format: 'yyyy-mm-dd',
+        header: false
+    });
     </script>
 @stop

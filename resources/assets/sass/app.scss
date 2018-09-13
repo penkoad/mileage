@@ -1,9 +1,19 @@
 
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-@import "variables";
+@import 'variables';
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import '~bootstrap/scss/bootstrap';
+// Font-awesome
+@import '~font-awesome5/scss/fontawesome';
+@import '~font-awesome5/scss/fa-brands';
+@import '~font-awesome5/scss/fa-regular';
+@import '~font-awesome5/scss/fa-solid';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
