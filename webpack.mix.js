@@ -17,26 +17,29 @@ if (!mix.inProduction()) {
 mix.js('resources/assets/js/app.js', 'public/js')
     .sass('resources/assets/sass/app.scss', 'public/css');
 
+// We move datepicker plugin to assets dir for further minification
 mix.copy('node_modules/gijgo/css/gijgo.css',
         'resources/assets/css/libs'
 ).copy('node_modules/gijgo/js/gijgo.js',
     'resources/assets/js/libs'
 );
 
+// Copy directly fonts from node_modules to public
 mix.copy('node_modules/gijgo/fonts/*',
     'public/fonts/'
 );
 
+// Combine css and js
 mix.styles([
     'resources/assets/css/libs/sweetalert.css',
     'resources/assets/css/libs/lity.css',
     'resources/assets/css/libs/gijgo.css'
 ], 'public/css/libs.css');
 
-mix.copy('node_modules/amcharts/dist/amcharts', 'public/amcharts');
-
 mix.scripts([
     'resources/assets/js/libs/sweetalert-dev.js',
     'resources/assets/js/libs/lity.js',
     'resources/assets/js/libs/gijgo.js'
 ], 'public/js/libs.js');
+
+mix.copy('node_modules/amcharts/dist/amcharts', 'public/amcharts');
