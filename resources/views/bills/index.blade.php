@@ -26,11 +26,13 @@
 
         <div class="table-responsive">
             <table class="table table-hover">
+                <thead class="thead-light">
                 <tr>
-                    <th>Amount</th>
-                    <th>Mileage</th>
-                    <th>Added on</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Mileage</th>
+                    <th scope="col">Added on</th>
                 </tr>
+                </thead>
                 @foreach($bills as $bill)
                     <tr>
                         <td>{{ $bill->amount }}</td>

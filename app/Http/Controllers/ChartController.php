@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Bill;
-use Illuminate\Http\Request;
 
 class ChartController extends Controller
 {
@@ -12,9 +11,9 @@ class ChartController extends Controller
      */
     public function index()
     {
-        $bills = Bill::all(['added_on', 'mileage']);
-        $data = $bills;
+        $dataset = Bill::all(['added_on', 'mileage']);
+        $title = 'Trend';
 
-        return view('bills.chart')->with(compact('data'));
+        return view('bills.chart')->with(compact('dataset', 'title'));
     }
 }

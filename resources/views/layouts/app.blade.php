@@ -10,9 +10,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" ></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
@@ -30,7 +27,8 @@
     </main>
 </div>
 <!-- Scripts -->
-<script src="/js/libs.js" ></script>
+<script src="{{ asset('js/app.js') }}" ></script>
+<script src="{{ asset('js/libs.js') }}" defer></script>
 @yield('bottom_scripts')
 @include('flash')
 </body>
