@@ -42,4 +42,4 @@ mix.scripts([
     'resources/assets/js/libs/gijgo.js'
 ], 'public/js/libs.js');
 
-mix.copy('node_modules/amcharts/dist/amcharts', 'public/amcharts');
+mix.copy('node_modules/amcharts3/amcharts', 'public/amcharts');
