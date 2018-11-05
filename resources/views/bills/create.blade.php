@@ -61,15 +61,18 @@
 
 @section('extra_css')
     <link href="{{ asset('css/libs.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker3.min.css" rel="stylesheet">
 @stop
 
 @section('bottom_scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
     <script>
     $('#added_on').datepicker({
-        uiLibrary: 'bootstrap4',
-        disableDaysOfWeek: [0, 6],
-        format: 'yyyy-mm-dd',
-        header: false
+        format: "yyyy-mm-dd",
+        //startDate: "today",
+        daysOfWeekDisabled: "0,6",
+        autoclose: true,
+        todayHighlight: true
     });
     </script>
 @stop
