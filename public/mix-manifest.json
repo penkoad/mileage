@@ -1,8 +1,10 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/resources/assets/css/libs/gijgo.css": "/resources/assets/css/libs/gijgo.css",
-    "/resources/assets/js/libs/gijgo.js": "/resources/assets/js/libs/gijgo.js",
+    "/resources/css/libs/gijgo.css": "/resources/css/libs/gijgo.css",
+    "/resources/js/libs/gijgo.js": "/resources/js/libs/gijgo.js",
+    "/resources/css/libs/sweetalert2.css": "/resources/css/libs/sweetalert2.css",
+    "/resources/js/libs/sweetalert2.all.js": "/resources/js/libs/sweetalert2.all.js",
     "/fonts/gijgo-material.eot": "/fonts/gijgo-material.eot",
     "/fonts/gijgo-material.svg": "/fonts/gijgo-material.svg",
     "/fonts/gijgo-material.ttf": "/fonts/gijgo-material.ttf",
