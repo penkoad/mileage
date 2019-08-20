@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="container-fluid">
-        <h2>Create a New Bill</h2>
         <div class="row">
-
             <div class="col"></div>
-            <div class="col-8">
+            <div class="col-6">
+                <h4>Create a New Bill</h4>
+
                 <form method="POST" action="{{ route('bills.store') }}" enctype="multipart/form-data">
                     {{ csrf_field() }}
 
@@ -36,8 +36,7 @@
                         </div>
 
                     </div>
-                    <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
-                        <hr>
+                    <div class="float-right">
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Create Bill</button>
                         </div>
@@ -52,18 +51,21 @@
 
 @section('extra_css')
     <link href="{{ mix('css/libs.css') }}" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker3.min.css" rel="stylesheet">
 @stop
 
 @section('bottom_scripts')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
-    <script>
-    $('#added_on').datepicker({
-        format: "yyyy-mm-dd",
-        //startDate: "today",
-        daysOfWeekDisabled: "0,6",
-        autoclose: true,
-        todayHighlight: true
-    });
+    <script defer>
+        console.log("jQuery : " + jQuery.fn.jquery);
+
+        jQuery(document).ready(function($){
+            $('#added_on').datepicker({
+                format: "yyyy-mm-dd",
+                //startDate: "today",
+                daysOfWeekDisabled: "0,6",
+                autoclose: true,
+                todayHighlight: true,
+                uiLibrary: 'bootstrap4'
+            });
+        });
     </script>
 @stop
