@@ -11,7 +11,13 @@
 |
 */
 
-Auth::routes();
+// Verify is false because default route are not working...See below
+Auth::routes(['register' => false, 'verify' => false]);
+
+Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
+Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify');
+// This route is provided via Post in \Illuminate\Routing\Route::emailVerification() and it breaks
+Route::get('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'HomeController@index');
