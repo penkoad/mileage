@@ -1,14 +1,6 @@
 <template>
     <div>
         <div id="chartdiv" class="chart"></div>
-        <div class="text-center">
-            Select theme:
-            <button class="btn btn-primary" v-on:click="makeCharts('light', '#ffffff', ['#67b7dc'])">Light</button> |
-            <button class="btn btn-primary" v-on:click="makeCharts('dark', '#282828', ['#ffffff'])">Dark</button> |
-            <button class="btn btn-primary" v-on:click="makeCharts('black', '#222222', ['#ffffff'])">Black</button> |
-            <button class="btn btn-primary" v-on:click="makeCharts('patterns', '#ffffff', ['#000000'])">Patterns</button> |
-            <button class="btn btn-primary" v-on:click="makeCharts('chalk', '#282828', ['#000000'])">Chalk</button>
-        </div>
     </div>
 </template>
 
@@ -17,7 +9,6 @@
     import AmSerial from 'amcharts3/amcharts/serial'
     import AmAnimate from 'amcharts3/amcharts/plugins/animate/animate.min'
     import AmResponsive from 'amcharts3/amcharts/plugins/responsive/responsive.min'
-    import AmExport from 'amcharts3/amcharts/plugins/export/export.min'
 
     export default {
         name: 'app',

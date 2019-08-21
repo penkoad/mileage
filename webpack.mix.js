@@ -35,6 +35,20 @@ mix.copy('node_modules/gijgo/fonts/*',
     'public/fonts/'
 );
 
+mix.styles([
+    'resources/css/libs/.css',
+    'resources/css/libs/lity.css',
+    'resources/css/libs/gijgo.css'
+    ],
+    'public/css/libs.css'
+);
+
+// copy image dir in amcharts public directory (50 files)
+mix.copy(
+    'node_modules/amcharts3/amcharts/images',
+    'public/amcharts/images'
+);
+
 // Combine css and js
 mix.styles([
     'resources/css/libs/sweetalert2.css',
@@ -46,6 +60,6 @@ mix.scripts([
     'resources/js/libs/sweetalert2.all.js',
     'resources/js/libs/lity.js',
     'resources/js/libs/gijgo.js'
-], 'public/js/libs.js');
-
-mix.copy('node_modules/amcharts3/amcharts', 'public/amcharts');
+    ],
+    'public/js/libs.js'
+);
