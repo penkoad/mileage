@@ -11,4 +11,3 @@ notes.txt
 /public/vendor
 .env.staging
 .vapor/
-vapor.yml

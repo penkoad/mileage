@@ -12,13 +12,14 @@
 
     export default {
         name: 'app',
-        props: ['data', 'ctitle'],
+        props: ['data', 'ctitle', 'assetUrl'],
 
         data() {
             return {
                 msg: this.ctitle,
                 dataset: JSON.parse(this.data),
-                chart: {}
+                chart: {},
+                asset: this.assetUrl
             }
         },
 
@@ -64,7 +65,8 @@
                 }
 
                 this.chart = window.AmCharts.makeChart("chartdiv", {
-                        path: "/amcharts/",
+                        // todo: we will need to pass the path from the URL::asset from the blade...
+                        path: this.asset,
                         type: "serial",
                         handDrawn: false,
                         theme: "dark",
