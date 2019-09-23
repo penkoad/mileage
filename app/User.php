@@ -47,4 +47,8 @@ class User extends Authenticatable implements MustVerifyEmail
         // This will automatically assign the user_id behind the scene
         return $this->bills()->save($bill);
     }
+
+    public function sendEmailVerificationNotification() {
+
+    }
 }
