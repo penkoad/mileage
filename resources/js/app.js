@@ -21,6 +21,10 @@ window.Vue = require('vue');
 
 Vue.component('amchart', require('./components/AmChart.vue').default);
 
+import AmChart from './components/AmChart.vue';
+
+Vue.component('amchart', AmChart);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
